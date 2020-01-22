@@ -18,14 +18,14 @@ elif message == '2':
     sold = input("How many candies have you sold?: ")
     sold = int(sold)
     candies[items] = candies[items] - sold
-    print(f"{candy}: {candies[items]}")
+    print(f"{candies[items]}")
 elif message == '3':
     # for candy, amount in candies.items():
     product = input("Please enter the product you want to check: ")
     received = input("How many items were delivered?: ")
     received = int(received)
     candies[product] = candies[product] + received
-    print(f"{candy}: {candies[product]}")
+    print(f"{candies[product]}")
     
 
 
