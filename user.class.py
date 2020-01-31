@@ -4,7 +4,7 @@ class User:
         self.first_name = first_name
         self.last_name = last_name
         self.email =email
-        self.login_attempts = 5
+        self.login_attempts = 0 
 
     def describe_user(self):
         print(f"Name: {self.first_name},\nLast Name: {self.last_name}, \nEmail: {self.email}")
@@ -20,11 +20,11 @@ class User:
 
 user1 = User('Boris','Johnson','borisjohnson@email.com')
 user2 = User('Vladimir','Putin','vladputin@email.com')
-
+user3 = User('Aysel', 'Rzayeva', 'aysel@email.com')
 
 user1.describe_user()
 user1.greet_user()
-user1.increment_login(3)
+user1.increment_login(1)
 print(f"{user1.first_name} attended to log in {user1.login_attempts} times!")
 
 user1.reset_login_attempts()
