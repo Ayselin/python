@@ -8,16 +8,20 @@ class Die:
     def roll_die(self):
         return randint(1,self.sides)
 
-def roll(sides):    
-    d = Die(sides)
-    d.roll_die()
+    # append 1 side randomly, 10 times
 
-    results = []
-    for _ in range(10):
-        result = d.roll_die()
-        results.append(result)
-    return results
-    # return [for _ in range(10): results.d.roll().append(result)]
+
+def roll(sides):    
+    die = Die(sides) # initializes Die with a number of sides
+    # results = [] # empty list to store
+    # # print a range of numbers from the numbers that are stored inside the function roll
+    # for _ in range(10):
+    #     # result = die.roll_die()
+    #     results.append( die.roll_die() )
+    # return results
+
+    return [ die.roll_die() for _ in range(10) ]
+
 print(roll(6))
 print(roll(10))
 print(roll(20))
